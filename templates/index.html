@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🔥 Smart Forest Fire Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+<div class="container">
+
+    <h1>🔥 Smart Forest Fire Detection System</h1>
+    <p class="subtitle">
+        Fire, Smoke detection and Leaf condition analysis using Deep Learning
+    </p>
+
+    <!-- 🔥 FIRE DETECTION -->
+    <section class="card">
+        <h2>🛰️ Fire & Smoke Detection</h2>
+
+        <form id="fire-form" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+                <input type="file" id="fire-image" name="image" accept="image/*" required>
+                <label for="fire-image" class="file-label">Choose Image</label>
+                <span id="fire-file-name">No file chosen</span>
+            </div>
+
+            <button type="submit" class="detect-btn">🔍 Detect Fire</button>
+        </form>
+
+        <div class="preview-container">
+            <img id="fire-preview">
+        </div>
+
+        <div class="result" id="fire-result"></div>
+    </section>
+
+    <!-- 🍃 LEAF DETECTION -->
+    <section class="card">
+        <h2>🍃 Leaf Condition Analysis</h2>
+
+        <form id="leaf-form" enctype="multipart/form-data">
+            <div class="file-input-wrapper">
+                <input type="file" id="leaf-image" name="leaf_image" accept="image/*" required>
+                <label for="leaf-image" class="file-label">Choose Leaf Image</label>
+                <span id="leaf-file-name">No file chosen</span>
+            </div>
+
+            <button type="submit" class="detect-btn green-btn">🍂 Detect Leaf</button>
+        </form>
+
+        <div class="preview-container">
+            <img id="leaf-preview">
+        </div>
+
+        <div class="result" id="leaf-result"></div>
+    </section>
+
+
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
